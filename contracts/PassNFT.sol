@@ -11,7 +11,9 @@ contract PassNFT is ERC721, Ownable {
 
     uint256 private latestKey; //Store the latest available PassKey
 
-    constructor() ERC721("PassNFT", "PNT") {}
+    constructor() ERC721("PassNFT", "PNT") {
+        latestKey=0;
+    }
 
     //Validate if the key is valid
     modifier onlyValidKey(uint256 _key) {
